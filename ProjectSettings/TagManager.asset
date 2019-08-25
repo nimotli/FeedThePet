@@ -16,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Projectile
   - 
   - 
   - 
@@ -41,9 +41,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: FarBackround
+    uniqueID: 1644352025
+    locked: 0
+  - name: Background
+    uniqueID: 4017027773
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: forground
+  - name: Center
+    uniqueID: 1584154803
+    locked: 0
+  - name: Forground
     uniqueID: 3968211165
     locked: 0

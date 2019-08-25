@@ -10,8 +10,12 @@ public class Trigger : MonoBehaviour
     TriggerObject objectToTrigger;
     bool triggered = false;
     SpriteRenderer sr;
+    AudioSource audioS;
+    Animator trigAnimator;
     private void Start()
     {
+        trigAnimator = GetComponent<Animator>();
+        audioS = GetComponent<AudioSource>();
         sr = this.GetComponentInChildren<SpriteRenderer>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -19,8 +23,10 @@ public class Trigger : MonoBehaviour
         if (collision.gameObject.tag == "Projectile" && !triggered)
         {
             objectToTrigger.activate();
-            sr.color = triggeredColor;
+            //sr.color = triggeredColor;
             triggered = true;
+            audioS.Play();
+            trigAnimator.SetTrigger("Triggered");
         }
     }
 }

@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Gate : TriggerObject
 {
-     override
+    Animator gateAnim;
+    private void Start()
+    {
+        gateAnim = GetComponent<Animator>();
+    }
+    override
     public void activate()
     {
-        gameObject.SetActive(false);
+        gateAnim.SetTrigger("Triggered");
+        //gameObject.SetActive(false);
     }
 }

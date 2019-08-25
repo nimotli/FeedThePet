@@ -8,6 +8,11 @@ public class Teleporter : MonoBehaviour
     Transform tpTarget;
     [SerializeField]
     float timeToTp = 0.5f;
+    AudioSource audioS;
+    private void Start()
+    {
+        audioS = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("triggered");
@@ -15,6 +20,7 @@ public class Teleporter : MonoBehaviour
         {
             //tp visual effect and sound
             StartCoroutine(teleport(collision.gameObject));
+            audioS.Play();
         }
     }
     IEnumerator teleport(GameObject projectile)

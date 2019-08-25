@@ -10,6 +10,7 @@ public class PetBehaviour : MonoBehaviour
     [SerializeField]
     SO_Pet petData;
     Collider2D petCol;
+    bool wasFed = false;
     void Start()
     {
         petCol = GetComponent<Collider2D>();
@@ -17,12 +18,17 @@ public class PetBehaviour : MonoBehaviour
         gameManager = GameManeger.instance;
         spriteRn = GetComponentInChildren<SpriteRenderer>();
         spriteRn.sprite = petData.petArt;
+        GameEvents.instance.onFeed += feedPet;
     }
-    
+
     public void feedPet()
     {
-        petAnim.SetBool("Fed", true);
-        petCol.enabled = false;
+        if(wasFed)
+        {
+            petAnim.SetBool("Fed", true);
+            petCol.enabled = false;
+        }
+       
     }
     public void setFedFalse()
     {
@@ -30,9 +36,13 @@ public class PetBehaviour : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Projectile")
+        ProjectileController pc = collision.gameObject.GetComponent<ProjectileController>();
+        if (collision.gameObject.tag == "Projectile" && pc.getProjectileData().type==0)
         {
-            feedPet();
+            pc.used = true;
+            wasFed = true;
+            Destroy(collision.gameObject);
+            GameEvents.instance.feed();
         }
     }
 }

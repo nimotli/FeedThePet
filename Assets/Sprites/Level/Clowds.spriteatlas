@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clowds
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: ff1808d9cc977244cabbe9f1793df020, type: 3}
+    - {fileID: 2800000, guid: 10c426650830d5144bd7acb947c7cc50, type: 3}
+    - {fileID: 2800000, guid: 1914809c781e923498d54f37d510578b, type: 3}
+    - {fileID: 2800000, guid: 4e69294ab2848fc488a3abf2f6bd0567, type: 3}
+    totalSpriteSurfaceArea: 1048576
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 10c426650830d5144bd7acb947c7cc50, type: 3}
+  - {fileID: 21300000, guid: ff1808d9cc977244cabbe9f1793df020, type: 3}
+  - {fileID: 21300000, guid: 4e69294ab2848fc488a3abf2f6bd0567, type: 3}
+  - {fileID: 21300000, guid: 1914809c781e923498d54f37d510578b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Clowd2
+  - Clowd1
+  - Clowd4
+  - Clowd3
+  m_Tag: Clowds
+  m_IsVariant: 0
